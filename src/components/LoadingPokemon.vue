@@ -1,5 +1,10 @@
 <template>
-    <h2>Loading pokemon ...</h2>
+    <h2>
+        Loading pokemon
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </h2>
     <img src="../assets/pokeball.png" width="200"/>
 </template>
 
@@ -11,6 +16,19 @@
     h2 {
         text-align: center;
     }
+
+    h2 span:nth-child(1) {
+        animation: dot-loading .8s linear 0s infinite alternate;
+    }
+
+    h2 span:nth-child(2) {
+        animation: dot-loading .8s linear .5s infinite alternate;
+    }
+
+    h2 span:nth-child(3) {
+        animation: dot-loading .8s linear 1s infinite alternate;
+    }
+
     img {
         display: block;
         margin: 0 auto;
@@ -25,6 +43,15 @@
         }
         to {
             rotate: 360deg;
+        }
+    }
+
+    @keyframes dot-loading {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 100;
         }
     }
 </style>
