@@ -7,12 +7,7 @@
   </header>
 
   <main>
-    <Suspense>
-      <PokemonList />
-      <template #fallback>
-        <p>Loading Pokemon...</p>
-      </template>
-    </Suspense>
+    <PokemonList />
   </main>
 </template>
 

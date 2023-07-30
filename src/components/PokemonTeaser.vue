@@ -41,17 +41,11 @@
 </template>
 
 <script setup>
-    import { onMounted } from 'vue';
-
     const props = defineProps({
         pokemon: {
             type: Object,
             required: true
         }
-    })
-
-    onMounted(() => {
-        // console.log('Mounted!')
     })
 
     const stats = {

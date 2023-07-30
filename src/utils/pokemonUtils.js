@@ -47,7 +47,6 @@ async function fetchPokemon(fetchUrl) {
                     special_defense,
                     speed
                 }
-
                 pokemonData.push(pokemon)
             }
 
