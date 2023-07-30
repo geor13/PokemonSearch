@@ -1,6 +1,6 @@
 <template>
     <h2>Loading pokemon ...</h2>
-    <img src="../assets/pokeball.png" width="260" height="260"/>
+    <img src="../assets/pokeball.png" width="200"/>
 </template>
 
 <script setup>
@@ -15,7 +15,7 @@
         display: block;
         margin: 0 auto;
         aspect-ratio: 1 / 1;
-        width: 260px;
+        width: 200px;
         animation: loading 1.5s ease-in-out 0s infinite;
     }
 

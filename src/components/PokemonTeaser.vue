@@ -62,11 +62,11 @@
 <style scoped>
 
 article {
-    border: 1px solid #ccc;
     text-align: center;
     padding: 100px 0;
     border-radius: .7rem;
     padding: 1.2rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
 }
 
 div {

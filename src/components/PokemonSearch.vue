@@ -14,7 +14,17 @@
 </template>
 
 <style scoped>
+
+  section[aria-label="pokemon search"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 1.5rem;
+  }
+
   input {
-    padding: .5rem 1.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
+    border: none;
+    padding: .8rem 1.5rem;
+    border-radius: .3rem;
   }
 </style>
