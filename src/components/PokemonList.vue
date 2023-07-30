@@ -1,6 +1,6 @@
 <template>
   <template v-if="indexLoading">
-      <h2>Loading pokemon ...</h2>
+    <LoadingPokemon />
   </template>
   <template v-else>
     <ul ref="list">
@@ -20,6 +20,7 @@
   import { ref } from 'vue';
   import { useInfiniteScroll } from '@vueuse/core';
   import PokemonTeaser from './PokemonTeaser.vue';
+  import LoadingPokemon from './LoadingPokemon.vue';
   import { storeToRefs } from 'pinia';
 
   const list = ref(null);
