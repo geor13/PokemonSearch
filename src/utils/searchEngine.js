@@ -1,7 +1,7 @@
 import MiniSearch from 'minisearch'
 
 const miniSearch = new MiniSearch ({
-    fields: ['name', 'attribute'],
+    fields: ['name', 'attribute', 'types'],
     storeFields: [
         'url',
         'name',
@@ -16,7 +16,7 @@ const miniSearch = new MiniSearch ({
         'speed'
     ],
     searchOptions: {
-        boost: { name: 2 },
+        boost: { name: 3 },
         fuzzy: 0.2,
         prefix: true,
     },

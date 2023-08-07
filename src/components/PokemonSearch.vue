@@ -6,7 +6,7 @@
   <section aria-label="pokemon search">
     <input
       type="text"
-      placeholder="Enter Pokemon Name"
+      placeholder="Enter Pokemon Name or pokemon type to search by type"
       id="pokemonSearch"
       name="pokemon"
       @input="searchPokemon($event.target.value)" />
