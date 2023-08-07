@@ -74,10 +74,10 @@ ul {
   margin: 0;
   padding: 1.5em .8em;
   overflow-y: auto;
+}
 
-  & li {
-    list-style: none;
-  }
+ul li {
+  list-style: none;
 }
 
 .pokemon-enter-active,

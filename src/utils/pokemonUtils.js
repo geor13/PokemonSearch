@@ -23,7 +23,7 @@ async function fetchPokemon(fetchUrl) {
                     id,
                     species: { name },
                     sprites: { back_default , front_default },
-                    types,
+                    types : rawTypes,
                     stats: [
                         { base_stat: hp },
                         { base_stat: attack },
@@ -33,6 +33,12 @@ async function fetchPokemon(fetchUrl) {
                         { base_stat: speed }
                     ]
                 } = details
+
+                const types = (function(pokemonTypes) {
+                    return pokemonTypes.map((type) => {
+                        return type.type.name
+                    })
+                })(rawTypes)
 
                 const pokemon = {
                     id,

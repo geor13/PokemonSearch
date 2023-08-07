@@ -9,3 +9,99 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+span:is(.bug) {
+    background-color: #94BC4A;
+}
+
+span:is(.dark) {
+    background-color: #736C75;
+}
+
+span:is(.dragon) {
+    background-color: #6A7BAF;
+}
+
+span:is(.electric) {
+    background-color: #E5C531;
+}
+
+span:is(.fairy) {
+    background-color: #E397D1;
+}
+
+span:is(.fighting) {
+    background-color: #CB5F48;
+}
+
+span:is(.fire) {
+    background-color: #EA7A3C;
+}
+
+span:is(.flying) {
+    background-color: #7DA6DE;
+}
+
+span:is(.ghost) {
+    background-color: #846AB6;
+}
+
+span:is(.grass) {
+    background-color: #71C558;
+}
+
+span:is(.ground) {
+    background-color: #CC9F4F;
+}
+
+span:is(.ice) {
+    background-color: #70CBD4;
+}
+
+span:is(.normal) {
+    background-color: #AAB09F;
+}
+
+span:is(.poison) {
+    background-color: #B468B7;
+}
+
+span:is(.psychic) {
+    background-color: #E5709B;
+}
+
+span:is(.rock) {
+    background-color: #B2A061;
+}
+
+span:is(.steel) {
+    background-color: #89A1B0;
+}
+
+span:is(.water) {
+    background-color: #539AE2;
+}
+
+.stat:is(.hp) {
+    background-color: #FF0000
+}
+
+.stat:is(.attack) {
+    background-color: #F08030
+}
+
+.stat:is(.special_attack) {
+    background-color: #6890F0
+}
+
+.stat:is(.defense) {
+    background-color: #F8D030
+}
+
+.stat:is(.special_defense) {
+    background-color: #78C850
+}
+
+.stat:is(.speed) {
+    background-color: #F85888
+}
