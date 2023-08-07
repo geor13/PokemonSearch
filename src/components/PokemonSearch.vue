@@ -46,17 +46,16 @@
     display: grid;
     grid-template-columns: 1fr max-content max-content;
     padding-top: 1.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
   }
 
   input {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
     border: none;
     padding: .8rem 1.5rem;
     border-radius: .3rem 0 0 .3rem;
   }
 
   section button {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13), 0 1px 1px 0 rgba(0, 0, 0, .11);
     border: none;
     cursor: pointer;
     padding: 0 .9rem;

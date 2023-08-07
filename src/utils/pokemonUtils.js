@@ -34,11 +34,9 @@ async function fetchPokemon(fetchUrl) {
                     ]
                 } = details
 
-                const types = (function(pokemonTypes) {
-                    return pokemonTypes.map((type) => {
-                        return type.type.name
-                    })
-                })(rawTypes)
+                const types = rawTypes.map((type) => {
+                    return type.type.name
+                })
 
                 const pokemon = {
                     id,
