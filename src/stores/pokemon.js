@@ -11,6 +11,8 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
     const NEXT_URL = ref('');
     const PREVIOUS_URL = ref('');
 
+    const nameSearch = ref(true);
+
     async function indexAllPokemon() {
         try {
             const pokemonData = await fetchPokemon(ALL_POKEMON_URL);
@@ -42,6 +44,7 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
         ALL_POKEMON_URL,
         NEXT_URL,
         searching,
-        indexAllPokemon
+        indexAllPokemon,
+        nameSearch
     }
 });

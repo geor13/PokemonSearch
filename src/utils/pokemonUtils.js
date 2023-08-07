@@ -79,9 +79,23 @@ async function* fetchPokemonDetails(pokemonData) {
 
 async function searchPokemon(name) {
     const searchTerm = (name === '') ? 'pokemon' : name;
-    const results = await miniSearch.search(searchTerm)
-
     const store = usePokemonStore();
+
+    const searchOptions = store.nameSearch ? {
+        fields: ['name', 'attribute'],
+        prefix: true,
+        fuzzy: 0.2,
+        boost: { name: 2 }
+    } : {
+        fields: ['types', 'attribute'],
+        prefix: true,
+        fuzzy: 0.2,
+        combineWith: 'AND',
+        boost: { types: 2 }
+    }
+
+    const results = await miniSearch.search(searchTerm, searchOptions)
+
     store.searching = (name === '') ? false : true;
 
     if (store.searching) {

@@ -16,7 +16,7 @@ const miniSearch = new MiniSearch ({
         'speed'
     ],
     searchOptions: {
-        boost: { name: 3 },
+        boost: { name: 2 },
         fuzzy: 0.2,
         prefix: true,
     },
