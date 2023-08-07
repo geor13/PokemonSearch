@@ -67,8 +67,7 @@
   }
 
   section button.active {
-    background-color: #70CBD4;
+    background-color: #E5709B;
     color: white;
-    outline: 2px white;
   }
 </style>
