@@ -7,12 +7,11 @@
   </header>
 
   <main>
-    <PokemonList />
+    <RouterView />
   </main>
 </template>
 
 <script setup>
-  import PokemonList from './components/PokemonList.vue'
   import PokemonSearch from './components/PokemonSearch.vue'
 
 </script>
