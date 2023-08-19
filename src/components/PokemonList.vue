@@ -24,8 +24,8 @@
   import { storeToRefs } from 'pinia';
 
   const list = ref(null);
-  const scrollLoading = ref(false);
   const indexLoading = ref(true);
+  const scrollLoading = ref(false);
 
   const pokemonStore = usePokemonStore();
   const { pokemon: pokemonData } = storeToRefs(pokemonStore);
@@ -35,8 +35,7 @@
     return pokemonStore.setPokemon()
   })
   .then(function(incomingData) {
-    const initialData = incomingData;
-    pokemonData.value = initialData;
+    pokemonData.value = incomingData;
     indexLoading.value = false;
   })
   .catch(function(error) {
