@@ -5,11 +5,11 @@
   <template v-else>
     <ul ref="list">
       <li v-for="(pokemon) in pokemonData" :key="pokemon.id" tabindex="0">
-        <Transition name="pokemon" appear type="transition">
-          <RouterLink :to="{ name: 'info', params: { pokemonName: pokemon.name } }">
-            <PokemonTeaser :pokemon="pokemon"/>
-          </RouterLink>
-        </Transition>
+        <RouterLink :to="{ name: 'info', params: { pokemonName: pokemon.name } }">
+            <Transition name="pokemon" appear type="transition">
+              <PokemonTeaser :pokemon="pokemon"/>
+            </Transition>
+        </RouterLink>
       </li>
     </ul>
   </template>
