@@ -32,7 +32,6 @@
 </template>
 
 <style scoped>
-
     p {
         font-size: .8rem;
         display: grid;

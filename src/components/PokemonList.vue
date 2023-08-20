@@ -6,7 +6,9 @@
     <ul ref="list">
       <li v-for="(pokemon) in pokemonData" :key="pokemon.id" tabindex="0">
         <Transition name="pokemon" appear type="transition">
-          <PokemonTeaser :pokemon="pokemon"/>
+          <RouterLink :to="{ name: 'info', params: { pokemonName: pokemon.name } }">
+            <PokemonTeaser :pokemon="pokemon"/>
+          </RouterLink>
         </Transition>
       </li>
     </ul>
@@ -80,6 +82,11 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #444;
 }
 
 .pokemon-enter-active,
