@@ -1,7 +1,9 @@
 <template>
   <header>
     <section aria-label="pokemon search">
-      <img alt="Pokemon logo" class="logo" src="./assets/logo.png" width="125" />
+      <RouterLink :to="{ name: 'home' }">
+        <img alt="Pokemon logo" class="logo" src="./assets/logo.png" width="125" />
+      </RouterLink>
       <PokemonSearch/>
     </section>
   </header>
@@ -12,7 +14,8 @@
 </template>
 
 <script setup>
-  import PokemonSearch from './components/PokemonSearch.vue'
+  import { RouterLink } from 'vue-router';
+import PokemonSearch from './components/PokemonSearch.vue'
 
 </script>
 

@@ -10,7 +10,6 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
     const CURRENT_URL = ref(INITIAL_POKEMON_PAGINATION);
     const NEXT_URL = ref('');
     const PREVIOUS_URL = ref('');
-
     const nameSearch = ref(true);
 
     async function indexAllPokemon() {
@@ -24,8 +23,7 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
 
     async function setPokemon() {
         try {
-            const pokemonData = await fetchPokemon(this.CURRENT_URL);
-            return pokemonData;
+            return await fetchPokemon(this.CURRENT_URL);
         } catch (error) {
             console.log(error)
         }
@@ -33,6 +31,10 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
 
     function setPokemonSearch(pokemon) {
         this.pokemon = pokemon
+    }
+
+    function resetCurrentURL() {
+        this.CURRENT_URL = INITIAL_POKEMON_PAGINATION
     }
 
     return {
@@ -45,6 +47,7 @@ export const usePokemonStore = defineStore('pokemonStore',  () => {
         NEXT_URL,
         searching,
         indexAllPokemon,
-        nameSearch
+        nameSearch,
+        resetCurrentURL
     }
 });

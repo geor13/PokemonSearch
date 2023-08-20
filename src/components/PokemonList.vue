@@ -17,11 +17,11 @@
 
 <script setup>
   import { usePokemonStore } from '../stores/pokemon.js';
-  import { ref } from 'vue';
   import { useInfiniteScroll } from '@vueuse/core';
+  import { storeToRefs } from 'pinia';
+  import { ref } from 'vue';
   import PokemonTeaser from './PokemonTeaser.vue';
   import LoadingPokemon from './LoadingPokemon.vue';
-  import { storeToRefs } from 'pinia';
 
   const list = ref(null);
   const indexLoading = ref(true);
@@ -30,10 +30,11 @@
   const pokemonStore = usePokemonStore();
   const { pokemon: pokemonData } = storeToRefs(pokemonStore);
 
-  pokemonStore.indexAllPokemon()
-  .then(function() {
-    return pokemonStore.setPokemon()
-  })
+  // needs to reset to prevent errors
+  // when navigating from other routes
+  pokemonStore.resetCurrentURL()
+
+  pokemonStore.setPokemon()
   .then(function(incomingData) {
     pokemonData.value = incomingData;
     indexLoading.value = false;
@@ -42,7 +43,8 @@
     console.log('error is ', error)
   })
 
-
+  // got it from vue use composables library
+  // use it for infinite scroll
   useInfiniteScroll(
     list,
     async () => {
@@ -60,6 +62,7 @@
     },
     { distance: 10, interval: 500 }
   )
+
 </script>
 
 <style scoped>
